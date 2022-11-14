@@ -1,0 +1,22 @@
+@mixin flex ($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+$grey: #808080;
+
+img {
+    object-fit: cover;
+}
+
+#app-container {
+    @include flex (center, center, column)
+}
+
+@import 'header.scss';
+@import 'post.scss';
+
+
+
