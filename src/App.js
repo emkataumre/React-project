@@ -9,7 +9,6 @@ function App() {
     useEffect(() => {
         db.collection('posts').onSnapshot(snapshot => {
         //every time the database changes(updates), this code will go off.
-        //small changes
             setPosts(snapshot.docs.map(doc => ({
             post: doc.data(),
             id: doc.id
