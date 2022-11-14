@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header.js'
 import Post from './components/Post.js'
-import {db} from './firebase.js'
+import { db } from './firebase';
 
 function App() {
     const [posts, setPosts] = useState ([])
@@ -13,8 +13,7 @@ function App() {
             post: doc.data(),
             id: doc.id
             })));
-        }) 
-}, []);
+        }) }, []);
     return (
         <div >
              <Header />
