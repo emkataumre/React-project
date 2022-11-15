@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Header from './components/Header.js'
+import {Header} from './components/Header.js'
+import {BasicModal} from './components/Header.js'
 import Post from './components/Post.js'
 import { db } from './firebase';
 
@@ -16,7 +17,9 @@ function App() {
         }) }, []);
     return (
         <div >
-             <Header />
+             <Header 
+             />
+             <BasicModal />
              <div id='app-container'>
              {
                     posts.map(({id, post}) => (
